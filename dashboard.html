@@ -6739,16 +6739,13 @@
         <div class="section">
           <h3>Validation</h3>
           <span class="v-warn">Disagreement: Analyzer=Not Found, Validator=Confident</span>
-          <div class="issues"><div class="issue-err">&#10060; <strong>[missing_primary_deadline]</strong> Analyzer concluded there is no primary deadline despite an authoritative User Correction that provides the official conference page and a specific submission deadline (2026-06-15).</div>
-<div class="issue-err">&#10060; <strong>[missing_primary_source]</strong> Analyzer reported no primary source. User Correction identifies the official index page (https://www.wi-iat.org/wi-iat2026/index.html) as the primary source for WI-IAT 2026 deadlines.</div>
-<div class="issue-warn">&#9888; <strong>[no_raw_evidence]</strong> No raw evidence sources were provided in the input. The verification relies on authoritative User Corrections rather than extracted raw sources.</div>
-<div class="issue-warn">&#9888; <strong>[rejected_domain_conflict]</strong> User Correction states that wi2026.at is a different conference (Wirtschaftsinformatik) and all evidence from that domain should be rejected. Ensure any automated aggregator does not treat wi2026.at as WI-IAT.</div></div>
-          <h4>Suggested Corrections</h4><div class="correction"><strong>primary_deadline</strong>: None &rarr; <em>2026-06-15</em><br><span class="muted">Authoritative User Correction points to the official WI-IAT 2026 index page which lists 'Full Paper Submission Deadline: 15 June 2026'. User Corrections are authoritative and must be respected.</span></div>
-<div class="correction"><strong>primary_source</strong>: None &rarr; <em>https://www.wi-iat.org/wi-iat2026/index.html</em><br><span class="muted">User Correction identifies this official index page as the primary source for WI-IAT 2026 deadlines.</span></div>
-<div class="correction"><strong>rounds</strong>: [] &rarr; <em>[{&quot;name&quot;:&quot;Full Paper&quot;,&quot;submission_deadline&quot;:&quot;2026-06-15&quot;,&quot;type&quot;:&quot;paper submission&quot;}]</em><br><span class="muted">User Correction specifies a 'Full Paper Submission Deadline: 15 June 2026'. Add a round for Full Paper submissions with that date.</span></div>
-<div class="correction"><strong>round_type</strong>: unknown &rarr; <em>single (Full Paper submission round)</em><br><span class="muted">User Correction provides a single explicit 'Full Paper Submission' deadline; no evidence of multiple rounds was supplied.</span></div>
-          <h4>Validator Reasoning</h4><p>The Analyzer's conclusion (no deadline found) cannot be accepted because authoritative User Corrections supply the official conference page and explicit deadline. Although no raw evidence items were present in the input for independent cross-checking, the instructions state User Corrections are authoritative and must be respected. Therefore the corrected primary deadline is 2026-06-15 from the official WI-IAT 2026 index page. Because this comes from the official conference site (as asserted by the user), the status is 'confident'. Recommend fetching and saving the cited URL as raw evidence for future verification and ensuring any prior irrelevant domain (wi2026.at) is rejected.<br><br>Independent status assessment: The Analyzer reported no deadline because no raw evidence was provided. However, authoritative User Corrections supply an official primary source (https://www.wi-iat.org/wi-iat2026/index.html) and state the Full Paper Submission Deadline is 2026-06-15. User Corrections are marked as authoritative and must be respected; therefore the correct primary deadline is 2026-06-15 and this is treated as confident because it references the official conference page.</p>
-          <div class="muted">Evidence consistency: 10%</div>
+          <div class="issues"><div class="issue-err">&#10060; <strong>[missing_primary_deadline]</strong> Analyzer concluded no primary deadline was found, but an authoritative user correction supplies the official primary deadline (2026-06-15). The analysis failed to incorporate this authoritative correction.</div>
+<div class="issue-err">&#10060; <strong>[missing_primary_source]</strong> Analyzer reported no primary source, but the user provided the official conference index page URL as the primary source.</div>
+<div class="issue-warn">&#9888; <strong>[no_raw_evidence]</strong> No raw evidence sources were included in the input. The validator relies on the authoritative user correction provided; independent corroborating sources were not available in the dataset.</div></div>
+          <h4>Suggested Corrections</h4><div class="correction"><strong>primary_deadline</strong>: None &rarr; <em>2026-06-15</em><br><span class="muted">Authoritative user correction states the official WI-IAT 2026 Full Paper Submission Deadline is 15 June 2026 (index page https://www.wi-iat.org/wi-iat2026/index.html). This user correction is authoritative and must be respected.</span></div>
+<div class="correction"><strong>primary_source</strong>: None &rarr; <em>https://www.wi-iat.org/wi-iat2026/index.html</em><br><span class="muted">User identifies this URL as the official WI-IAT 2026 index page containing the Full Paper Submission deadline.</span></div>
+          <h4>Validator Reasoning</h4><p>The input contained no raw evidence entries, but included authoritative user corrections specifying the conference (WI-IAT 2026) and the official index page with the Full Paper Submission deadline of 15 June 2026. Per the instructions, user corrections are authoritative and must be respected. No contradictory sources were provided, and the date is plausible for an academic conference timetable. Given the authoritative nature of the supplied source and absence of contradictions, the deadline is accepted with 'confident' status. Note: independent corroboration (e.g., additional official pages or archived copies) was not present in the raw evidence; if such sources are later supplied and contradict this date, the status should be re-evaluated.<br><br>Independent status assessment: An authoritative user correction identifies the official WI-IAT 2026 index page (https://www.wi-iat.org/wi-iat2026/index.html) and states the Full Paper Submission Deadline is 2026-06-15. No other (contradictory) evidence sources were provided. The user corrections are marked authoritative and must be respected, so the deadline 2026-06-15 is accepted with confidence.</p>
+          <div class="muted">Evidence consistency: 100%</div>
         </div>
 
         
@@ -6768,10 +6765,10 @@
         
 
         <div class="section stats">
-          <span>Checks: 1</span>
-          <span>Tokens: 2,942</span>
-          <span>Last: 2026-03-12T04:55</span>
-          <span>Analyzed: 2026-03-12T04:55</span>
+          <span>Checks: 2</span>
+          <span>Tokens: 2,845</span>
+          <span>Last: 2026-03-12T05:24</span>
+          <span>Analyzed: 2026-03-12T05:24</span>
         </div>
       </div>
     </div>
