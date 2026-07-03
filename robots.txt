@@ -1,2 +1,3 @@
 User-agent: *
 Disallow: /dashboard.html
+# pages.yml push-trigger validation
